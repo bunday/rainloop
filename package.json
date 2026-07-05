@@ -1,0 +1,25 @@
+{
+  "name": "rainloop",
+  "version": "1.0.0",
+  "description": "Self-hosted ambient loop generator — upload a short video clip + a sound, make a seamless loop, render it out to hours of sleep/ambient video. Runs on one machine.",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "dev": "bun run --hot src/index.ts",
+    "dev:web": "vite",
+    "build:web": "vite build",
+    "start": "bun src/index.ts"
+  },
+  "dependencies": {
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.1.14",
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.0",
+    "typescript": "^5.6.0",
+    "vite": "^5.4.0"
+  }
+}

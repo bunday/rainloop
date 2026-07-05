@@ -1,0 +1,15 @@
+services:
+  rainloop:
+    build: .
+    image: rainloop
+    ports:
+      - "3800:3800"
+    volumes:
+      # Your clips, sounds and rendered outputs live here, on the host, so they
+      # survive container rebuilds. Renders can be large (an 8h file is several
+      # GB) — make sure this disk has room.
+      - ./data:/app/data
+    environment:
+      - DATA_DIR=/app/data
+      - PORT=3800
+    restart: unless-stopped
